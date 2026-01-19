@@ -1,9 +1,8 @@
 .herosection {
     position: relative;
-    min-height: 300px;
-    padding: 50px 0 20px;
+    min-height: 488px;
+    padding: 107px 0 50px;
 
-    
     &::after {
         content: '';
         display: block;
@@ -41,14 +40,26 @@
     }
 }
 
+// -
 .webcam-places {
-    padding: 70px 0 20px;
+    padding: 70px 0 10px;
+    position: relative;
+
+    .bg-el {
+        right: 0;
+        top: 40px;
+        position: absolute;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
 }
 
 .webcam-places__wrapper {
     padding: 0 60px;
 }
-
 
 .webcam-places__box {
     margin-bottom: 90px;
@@ -80,6 +91,7 @@
     border: 1px solid #CFCFCF;
     transition: 0.3s;
     max-width: 340px;
+    background: #fff;
 
     .imgwrap {
         position: absolute;
@@ -110,3 +122,61 @@
         }
     }
 }
+
+// -
+.webcam-popular {
+    position: relative;
+    padding: 93px 0 70px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(#000, 0.8);
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .blue-btn {
+        width: 360px;
+        margin-top: 40px;
+    }
+
+    .sect-subtitle {
+        color: #0098CB;
+    }
+
+}
+
+.webcam-popular__item {
+    display: block;
+    height: 210px;
+    position: relative;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.webcam-popular__label {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    font-size: 17px;
+    height: 35px;
+    padding: 3px 28px;
+    background: rgba(#000, 0.64);
+}
+
