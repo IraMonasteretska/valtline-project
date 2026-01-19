@@ -1,0 +1,120 @@
+header.header {
+    height: 78px;
+    background: #242424;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 12;
+}
+
+.header__logo {
+    img {
+        vertical-align: top;
+        max-width: 116px;
+    }
+}
+
+.language {
+    position: relative;
+    text-align: right;
+}
+
+.language__current {
+    position: relative;
+    padding-left: 36px;
+    width: 70px;
+    display: inline-block;
+    cursor: pointer;
+
+    img {
+        width: 27px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        
+    }
+
+    span {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 13px;
+        display: inline-block;
+        position: relative;
+        padding-right: 15px;
+
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: url('../img/general/lang-arrow.svg') no-repeat center / 100%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.3s;
+        }
+    }
+
+    &.open {
+        span {
+            &::after {
+                transform: translateY(-50%) rotate(-180deg);
+            }
+        }
+    }
+}
+
+.language__list {
+    width: 151px;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 11px);
+    background: #fff;
+    box-shadow: 0 0 6px rgba(#000, 0.3);
+    text-align: left;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: 0.5s;
+
+    &.active {
+        opacity: 1;
+        z-index: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    li {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        position: relative;
+        padding-left: 27px;
+        color: #333;
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.3s;
+        display: block;
+
+        img {
+            width: 17px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &:hover {
+            color: #02B0EA;
+        }
+    }
+}
