@@ -13,5 +13,35 @@ $(document).ready(function () {
         }
     });
 
+    // look more
+    $('.webcamlist').each(function () {
+    const $list = $(this).find('ul li');
+    const $btn = $(this).find('.lookmore');
+
+    if ($list.length <= 3) {
+        $btn.hide();
+    } else {
+        $list.slice(3).hide();
+    }
+});
+
+$('.lookmore').on('click', function () {
+    const $btn = $(this);
+    const $wrap = $btn.closest('.webcamlist');
+    const $items = $wrap.find('ul li');
+
+    const isOpen = $btn.attr('data-open') === 'true';
+
+    if (isOpen) {
+        $items.slice(3).slideUp();
+        $btn
+            .attr('data-open', 'false')
+    } else {
+        $items.slideDown();
+        $btn
+            .attr('data-open', 'true')
+    }
+});
+
 
 });
