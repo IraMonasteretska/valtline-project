@@ -118,3 +118,13 @@ header.header {
         }
     }
 }
+
+@media(max-width:575.8px) {
+    header.header {
+        height: 66px;
+    }
+
+    .header__logo img {
+        max-width: 88px;
+    }
+}

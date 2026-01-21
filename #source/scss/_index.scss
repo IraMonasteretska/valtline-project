@@ -164,7 +164,17 @@
     height: 210px;
     position: relative;
     margin-bottom: 20px;
-    position: relative;
+    overflow: hidden;
+
+    img {
+        transition: 0.5s;
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.05);
+        }
+    }
 }
 
 .webcam-popular__label {
@@ -417,5 +427,492 @@
                 padding-left: 60px;
             }
         }
+    }
+}
+
+// -
+.subscribe {
+    min-height: 330px;
+    background: #242424;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    .bg-el1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 375px;
+    }
+
+    .bg-el2 {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        max-width: 466px;
+    }
+}
+
+.subscribe__descr {
+    p {
+        margin: 0;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .title {
+        margin-bottom: 26px;
+        color: #fff;
+        font-size: 43px;
+        font-weight: 600;
+        line-height: 100%;
+    }
+}
+
+.inputsfield {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subsemail {
+    width: 100%;
+    max-width: calc(100% - 218px);
+    flex: 0 0 calc(100% - 218px);
+    height: 46px;
+    background: #fff;
+    border: none;
+    padding-left: 19px;
+    color: #242424;
+    font-size: 18px;
+
+    &::placeholder {
+        color: rgba(#242424, 0.87);
+    }
+}
+
+.subssubmit {
+    width: 100%;
+    max-width: 195px;
+    flex: 0 0 195px;
+    background: #02B0EA;
+    border: 2px solid #02B0EA;
+    min-height: 46px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+
+    &:hover {
+        background: #fff;
+        color: #02B0EA;
+    }
+}
+
+.videosection {
+    video {
+        width: 100%;
+        vertical-align: top;
+    }
+}
+
+.tabletshow,
+.mobileshow {
+    display: none;
+}
+
+@media(max-width:1599.8px) {
+    .webcam-places__box .title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .webcam-place__item .titlewrap p {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+
+    .webcam-places__box {
+        margin-bottom: 60px;
+    }
+
+    .subscribe__descr .title {
+        font-size: 38px;
+    }
+
+
+
+    .webcam-all h2,
+    .locations h2 {
+        margin-bottom: 50px;
+    }
+
+    .webcamlist,
+    .webcam-all__lists .row {
+        margin-bottom: 40px;
+    }
+
+    .webcamlist .title {
+        margin-bottom: 15px;
+    }
+
+    .webcamlist ul li {
+        margin-bottom: 12px;
+    }
+
+    .webcamlist .title {
+        font-size: 22px;
+    }
+
+    .location-list ul a {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:1399.8px) {
+    .herosection {
+        min-height: 400px;
+
+        h1 {
+            margin-bottom: 15px;
+            font-size: 50px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+
+    .webcam-place__item .imgwrap {
+        width: 75px;
+    }
+
+    .webcam-place__item .titlewrap {
+        padding-left: 75px;
+    }
+
+    .locations__wrapper .col-lg-4:nth-child(2) .location-list {
+        padding-left: 0;
+    }
+
+    .locations__wrapper .col-lg-4:nth-child(3) .location-list {
+        padding-left: 0;
+    }
+
+    .subscribe {
+        min-height: 280px;
+    }
+
+    .subscribe__descr .title {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+
+    .subssubmit {
+        max-width: 160px;
+        flex: 0 0 160px;
+    }
+
+    .subsemail {
+        max-width: calc(100% - 180px);
+        flex: 0 0 calc(100% - 180px);
+    }
+
+
+
+    .webcam-places__box .title {
+        font-size: 21px;
+    }
+
+
+
+    .webcamlist .title {
+        font-size: 20px;
+    }
+
+    .subscribe__descr p {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:1199.8px) {
+    .webcam-places__box .title {
+        margin-bottom: 10px;
+    }
+
+    .webcam-places .bg-el {
+        max-width: 250px;
+    }
+
+    .webcam-popular {
+        padding: 70px 0 70px;
+    }
+
+    .webcam-popular__item {
+        height: 180px;
+    }
+
+    .webcam-all {
+        padding: 70px 0 30px;
+    }
+
+    .locations__wrapper {
+        padding: 0 100px;
+    }
+
+    .subscribe {
+        min-height: 240px;
+    }
+
+    .subscribe .bg-el1,
+    .subscribe .bg-el2 {
+        max-height: 100%;
+        width: auto;
+    }
+
+    .subssubmit {
+        max-width: 120px;
+        flex: 0 0 120px;
+    }
+
+    .subsemail {
+        max-width: calc(100% - 140px);
+        flex: 0 0 calc(100% - 140px);
+    }
+
+
+
+    .webcam-places__box .title {
+        font-size: 18px;
+    }
+
+    .location-list ul a {
+        font-size: 16px;
+    }
+
+    .webcam-place__item .titlewrap p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:991.8px) {
+
+    .webcam-places__wrapper {
+        padding: 0;
+    }
+
+    .webcam-all__lists .row {
+        margin-bottom: 10px;
+    }
+
+    .a-item {
+        background: #ededed;
+    }
+
+    .location-list ul {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        li {
+            width: 100%;
+            max-width: 50%;
+            flex: 0 0 50%;
+        }
+    }
+
+    .location-list ul li:last-child {
+        margin-bottom: 22px;
+    }
+
+    .subscribe__descr {
+        margin-bottom: 30px;
+    }
+
+    .tabletshow {
+        display: block;
+    }
+
+    .locations__wrapper {
+        padding: 0 20px 0 60px;
+    }
+
+
+    .webcam-places__box {
+        margin-bottom: 40px;
+    }
+
+    .webcam-places__box .title {
+        font-size: 21px;
+    }
+}
+
+@media(max-width:767.8px) {
+    .webcam-place__item {
+        max-width: 100%;
+    }
+
+    .locations__wrapper {
+        padding: 0;
+    }
+
+    .location-list ul li {
+        padding-right: 10px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .herosection {
+        min-height: 280px;
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-size: 33px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    }
+
+    .webcam-place__item .imgwrap {
+        width: 109px;
+    }
+
+    .webcam-place__item .titlewrap {
+        padding-left: 109px;
+
+        p {
+            font-size: 17px;
+        }
+    }
+
+    .webcam-places .bg-el {
+        top: 150px;
+        max-width: 180px;
+    }
+
+    .webcam-popular__item {
+        height: 105px;
+    }
+
+    .webcam-popular__label {
+        font-size: 14px;
+        padding: 3px 15px;
+        height: 24px;
+    }
+
+    .webcam-popular .blue-btn {
+        margin-top: 10px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .webcamlist {
+        max-width: 245px;
+        margin: 0 auto 40px;
+    }
+
+    .webcam-all__lists .row {
+        margin-bottom: 0;
+    }
+
+    .webcam-all .bg-el {
+        max-width: 140px;
+    }
+
+    .locations {
+        padding: 50px 0 20px;
+    }
+
+    .location-list ul li {
+        padding-right: 0;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .location-list {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .subscribe .bg-el1,
+    .subscribe .bg-el2 {
+        display: none;
+    }
+
+    .subscribe {
+        min-height: initial;
+        padding: 50px 0;
+    }
+
+    .subscribe__descr {
+        text-align: center;
+        margin-bottom: 35px;
+
+        .title {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .subsemail {
+        max-width: 100%;
+        flex: 0 0 100%;
+        margin-bottom: 25px;
+    }
+
+    .subssubmit {
+        max-width: 100%;
+        flex: 0 0 100%;
+        font-size: 16px;
+    }
+
+    .mobileshow {
+        display: block;
+    }
+
+    .videolink {
+        display: none;
+    }
+
+
+
+    .webcam-places__box ul li {
+        margin-bottom: 15px;
+    }
+
+    .webcam-all h2,
+    .locations h2 {
+        margin-bottom: 30px;
+    }
+
+    .webcam-places__box {
+        margin-bottom: 35px;
+    }
+
+    .webcam-places {
+        padding: 40px 0 20px;
+    }
+
+    .webcam-popular {
+        padding: 50px 0;
+    }
+
+    .webcam-all {
+        padding: 50px 0 20px;
     }
 }
