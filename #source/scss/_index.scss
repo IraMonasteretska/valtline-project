@@ -291,7 +291,7 @@
     }
 }
 
-.lookmore {
+.lookmore, .readmore {
     display: inline-block;
     color: #02B0EA;
     font-size: 16px;
@@ -715,9 +715,7 @@
         margin-bottom: 10px;
     }
 
-    .a-item {
-        background: #ededed;
-    }
+   
 
     .location-list ul {
         display: flex;

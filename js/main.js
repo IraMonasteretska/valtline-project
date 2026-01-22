@@ -12,36 +12,66 @@ $(document).ready(function () {
             $('.language__current').removeClass('open');
         }
     });
-
+    
     // look more
     $('.webcamlist').each(function () {
-    const $list = $(this).find('ul li');
-    const $btn = $(this).find('.lookmore');
+        const $list = $(this).find('ul li');
+        const $btn = $(this).find('.lookmore');
 
-    if ($list.length <= 3) {
-        $btn.hide();
-    } else {
-        $list.slice(3).hide();
+        if ($list.length <= 3) {
+            $btn.hide();
+        } else {
+            $list.slice(3).hide();
+        }
+    });
+
+    $('.lookmore').on('click', function () {
+        const $btn = $(this);
+        const $wrap = $btn.closest('.webcamlist');
+        const $items = $wrap.find('ul li');
+
+        const isOpen = $btn.attr('data-open') === 'true';
+
+        if (isOpen) {
+            $items.slice(3).slideUp();
+            $btn
+                .attr('data-open', 'false')
+        } else {
+            $items.slideDown();
+            $btn
+                .attr('data-open', 'true')
+        }
+    });
+
+    // style select
+    if ($('select').length) {
+        $('.styledselect').select2({
+            placeholder: "Select a state",
+            minimumResultsForSearch: Infinity,
+        });
     }
-});
 
-$('.lookmore').on('click', function () {
-    const $btn = $(this);
-    const $wrap = $btn.closest('.webcamlist');
-    const $items = $wrap.find('ul li');
+    // favorite btn
+    $('.favoriteall-btn, .setfav, .favorite').on('click', function () {
+        $(this).toggleClass('active');
+    });
 
-    const isOpen = $btn.attr('data-open') === 'true';
+    // readmore
 
-    if (isOpen) {
-        $items.slice(3).slideUp();
-        $btn
-            .attr('data-open', 'false')
-    } else {
-        $items.slideDown();
-        $btn
-            .attr('data-open', 'true')
-    }
-});
+    $('.readmore').on('click', function () {
+        const $btn = $(this);
+        const isOpen = $btn.attr('data-open') === 'true';
+
+        if (isOpen) {
+            $btn
+                .attr('data-open', 'false')
+        } else {
+            $btn
+                .attr('data-open', 'true')
+        }
+
+        $('.hidden-content').slideToggle()
+    });
 
 
 });

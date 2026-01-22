@@ -76,7 +76,12 @@ a {
     line-height: 130%;
 }
 
-h1 {}
+h1 {
+    color: #242424;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 130%;
+}
 
 h2 {
     margin-bottom: 55px;
@@ -136,9 +141,19 @@ h2 {
     }
 }
 
+@media(max-width:1199.8px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
 @media(max-width:575.8px) {
     .sect-subtitle {
         font-size: 16px;
+    }
+
+    h1 {
+        font-size: 25px;
     }
 
     h2 {

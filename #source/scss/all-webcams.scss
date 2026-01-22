@@ -1,0 +1,378 @@
+.breadcrumbs-section {
+    padding: 40px 0 30px;
+}
+
+.breadcrumbs {
+    ul {
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            font-size: 16px;
+            color: #02B0EA;
+            margin-right: 34px;
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 7px;
+                height: 11px;
+                background: url('../img/general/breadcrumbs-arrow.svg') no-repeat center / 100%;
+                position: absolute;
+                right: -22px;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-top: 1px;
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+
+            a {
+                color: #B4B4B4;
+                transition: 0.3s;
+
+                &:hover {
+                    color: #02B0EA;
+                }
+            }
+        }
+    }
+}
+
+.breadcrumbs-section+.webcamscontent {
+    padding-top: 0;
+}
+
+.webcamscontent {
+    padding: 90px 0;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 28px;
+    }
+}
+
+.allwebcams-wrapper {
+    margin-top: 50px;
+}
+
+.allwebcams__sort {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.sortby {
+    width: 250px;
+}
+
+.favoriteall-btn {
+    background: #fff;
+    width: 230px;
+    border: 1px solid #CFCFCF;
+    min-height: 46px;
+    color: #5B5B5B;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    svg {
+        margin-right: 10px;
+
+        path {
+            transition: 0.3s;
+        }
+    }
+
+    &:hover {
+        color: #02B0EA;
+        border: 1px solid #02B0EA;
+    }
+
+    &.active {
+        background: #02B0EA;
+        border: 1px solid #02B0EA;
+        color: #fff;
+
+        path {
+            stroke: #fff;
+        }
+    }
+}
+
+.allwebcams-item {
+    position: relative;
+    margin-bottom: 20px;
+
+    a {
+        display: block;
+        height: 280px;
+        position: relative;
+
+        img {
+            transition: 0.3s;
+        }
+    }
+
+    .newlabel {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: rgba(#000, 0.64);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        padding: 4px 28px;
+        color: #fff;
+        font-size: 17px;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .title {
+        min-height: 56px;
+        padding: 5px 16px;
+        background: rgba(#000, 0.65);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+
+        p {
+            margin: 0;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    .setfav {
+        padding: 0;
+        background: transparent;
+        border: none;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+        transition: 0.3s;
+
+        svg path {
+            transition: 0.3s;
+        }
+
+        &:hover {
+            svg path {
+                fill: #02B0EA;
+            }
+        }
+
+        &.active {
+            svg path {
+                fill: #02B0EA;
+            }
+        }
+    }
+
+    &:hover {
+        .newlabel {
+            background: rgba(#02B0EA, 0.65);
+        }
+
+        .title {
+            background: rgba(#02B0EA, 0.65);
+        }
+    }
+}
+
+.pagination {
+    justify-content: center;
+    margin-top: 45px;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 27px;
+        font-size: 18px;
+        color: #1A1A1A;
+        transition: 0.3s;
+
+        svg path {
+            transition: 0.3s;
+        }
+
+        &:hover {
+            color: #02B0EA;
+
+            svg path {
+                stroke: #02B0EA;
+            }
+        }
+
+        &.active {
+            background: #02B0EA;
+            color: #fff;
+        }
+    }
+}
+
+
+
+
+
+.sortby .select2-container {
+    width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single {
+    height: 46px;
+    border-radius: 0;
+    border: 1px solid #CFCFCF;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 46px;
+    // color: #5B5B5B;
+    color: #02B0EA;
+    padding-left: 17px;
+    font-size: 17px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 46px;
+    top: 0;
+    right: 5px;
+    width: 40px;
+
+    b {
+        border: none !important;
+        width: 15px;
+        height: 10px;
+        background: url('../img/general/select-arrow.svg') no-repeat center / 100%;
+        transition: 0.3s;
+    }
+}
+
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    transform: rotate(-180deg);
+}
+
+.select2-results__option {
+    transition: 0.3s;
+    padding-left: 17px;
+    color: #5B5B5B;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+    background: #fff;
+    color: #02B0EA;
+}
+
+
+
+
+@media(max-width:1399.8px) {
+    .allwebcams-item a {
+        height: 240px;
+    }
+
+    .allwebcams-item .newlabel {
+        font-size: 15px;
+    }
+
+    .allwebcams-item .title p {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:1199.8px) {
+    .allwebcams-wrapper {
+        margin-top: 30px;
+    }
+
+    .allwebcams__sort {
+        margin-bottom: 30px;
+    }
+
+    .allwebcams-wrapper .a-section {
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:575.8px) {
+    .breadcrumbs-section {
+        padding: 25px 0 35px;
+    }
+
+    .webcamscontent h1 {
+        margin-bottom: 25px;
+    }
+
+    .favall {
+        width: 100%;
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    .sortby {
+        order: 2;
+    }
+
+    .sortby,
+    .favoriteall-btn {
+        width: 100%;
+    }
+
+    .allwebcams-wrapper {
+        margin-top: 20px;
+    }
+
+    .allwebcams-item {
+        margin-bottom: 15px;
+
+        a {
+            height: 260px;
+        }
+    }
+
+    .pagination {
+        margin-top: 20px;
+    }
+
+    .webcamscontent {
+        padding: 50px 0;
+    }
+
+
+
+
+}
