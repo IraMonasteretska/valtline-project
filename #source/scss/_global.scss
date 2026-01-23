@@ -94,6 +94,14 @@ h2 {
     }
 }
 
+h4 {
+    color: #242424;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 100%;
+    margin-bottom: 35px;
+}
+
 
 
 .blue-btn {
@@ -115,14 +123,6 @@ h2 {
     }
 }
 
-
-
-
-
-
-
-
-
 @media(max-width:1599.8px) {
     .sect-subtitle {
         font-size: 18px;
@@ -138,6 +138,10 @@ h2 {
     h2 {
         font-size: 36px;
         margin-bottom: 40px;
+    }
+
+    h4 {
+        font-size: 24px;
     }
 }
 

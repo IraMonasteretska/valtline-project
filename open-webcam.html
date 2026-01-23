@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,8 @@
     <!-- <link rel="icon" type="image/x-icon" href="favicon.png"> -->
     <link rel="stylesheet" href="css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="css/lib/select2.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="css/lib/swiper.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -121,7 +123,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="webopen__description">
                                 <div class="row">
                                     <div class="col-lg-8">
@@ -175,28 +176,335 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="videosection">
+                    <a href="#" class="videolink">
+                        <video autoplay="" loop="" muted="">
+                            <source src="video/video.mp4" type="video/mp4">
+                        </video>
+                    </a>
+                    <a href="#" class="mobileshow">
+                        <img src="img/main/a-img.jpg" alt="img">
+                    </a>
+                </div>
+
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="a-section a4 pt70">
+                                <div class="a-grid">
+                                    <div class="a-item">
+                                        <img src="img/main/adimg1.png" alt="img">
+                                    </div>
+                                    <div class="a-item">
+                                        <img src="img/main/adimg1.png" alt="img">
+                                    </div>
+                                    <div class="a-item">
+                                        <img src="img/main/adimg1.png" alt="img">
+                                    </div>
+                                    <div class="a-item">
+                                        <img src="img/main/adimg1.png" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="location-section">
+                                <h4>Location</h4>
+                                <div class="map-wrapper">
+                                    <div id="map"></div>
+                                </div>
+                            </div>
+
+                            <div class="weather-section">
+                                <h4>Weather</h4>
+                                <div class="weather-wrapper">
+                                    <div class="swiper weather-slider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="weather-item">
+                                                    <p class="day">Sun</p>
+                                                    <img src="img/open/weather1.svg" alt="img">
+                                                    <p class="temperature">
+                                                        <span class="temperature__day">
+                                                            15<sup>o</sup>
+                                                        </span>
+                                                        <span class="temperature__night">
+                                                            -3<sup>o</sup>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="weather-item">
+                                                    <p class="day">mon</p>
+                                                    <img src="img/open/weather2.svg" alt="img">
+                                                    <p class="temperature">
+                                                        <span class="temperature__day">
+                                                            12<sup>o</sup>
+                                                        </span>
+                                                        <span class="temperature__night">
+                                                            -6<sup>o</sup>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="weather-item">
+                                                    <p class="day">tue</p>
+                                                    <img src="img/open/weather3.svg" alt="img">
+                                                    <p class="temperature">
+                                                        <span class="temperature__day">
+                                                            14<sup>o</sup>
+                                                        </span>
+                                                        <span class="temperature__night">
+                                                            -1<sup>o</sup>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="weather-item">
+                                                    <p class="day">wed</p>
+                                                    <img src="img/open/weather4.svg" alt="img">
+                                                    <p class="temperature">
+                                                        <span class="temperature__day">
+                                                            15<sup>o</sup>
+                                                        </span>
+                                                        <span class="temperature__night">
+                                                            -1<sup>o</sup>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="weather-item">
+                                                    <p class="day">thu</p>
+                                                    <img src="img/open/weather1.svg" alt="img">
+                                                    <p class="temperature">
+                                                        <span class="temperature__day">
+                                                            15<sup>o</sup>
+                                                        </span>
+                                                        <span class="temperature__night">
+                                                            -1<sup>o</sup>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="weather-item">
+                                                    <p class="day">fri</p>
+                                                    <img src="img/open/weather2.svg" alt="img">
+                                                    <p class="temperature">
+                                                        <span class="temperature__day">
+                                                            15<sup>o</sup>
+                                                        </span>
+                                                        <span class="temperature__night">
+                                                            -3<sup>o</sup>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="weather-item">
+                                                    <p class="day">sat</p>
+                                                    <img src="img/open/weather1.svg" alt="img">
+                                                    <p class="temperature">
+                                                        <span class="temperature__day">
+                                                            15<sup>o</sup>
+                                                        </span>
+                                                        <span class="temperature__night">
+                                                            -3<sup>o</sup>
+                                                        </span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="addintional-info">
+                                <h4>Additional Information</h4>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="#" class="addintional-info__item">
+                                            <div class="imgwrap">
+                                                <img class="fit-image" src="img/open/additional1.jpg" alt="img">
+                                            </div>
+                                            <div class="descr">
+                                                <p>
+                                                    Guida alle esperienze e utilita
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="#" class="addintional-info__item">
+                                            <div class="imgwrap">
+                                                <img class="fit-image" src="img/open/additional2.jpg" alt="img">
+                                            </div>
+                                            <div class="descr">
+                                                <p>
+                                                    Sci estivo e bike al Passo Stelvio
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="#" class="addintional-info__item">
+                                            <div class="imgwrap">
+                                                <img class="fit-image" src="img/open/additional3.jpg" alt="img">
+                                            </div>
+                                            <div class="descr">
+                                                <p>
+                                                    Olimpiadi a Bormio
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="#" class="addintional-info__item">
+                                            <div class="imgwrap">
+                                                <img class="fit-image" src="img/open/additional4.jpg" alt="img">
+                                            </div>
+                                            <div class="descr">
+                                                <p>
+                                                    lab. Artigianale Gioielli antichi e moderni
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="#" class="addintional-info__item">
+                                            <div class="imgwrap">
+                                                <img class="fit-image" src="img/open/additional5.jpg" alt="img">
+                                            </div>
+                                            <div class="descr">
+                                                <p>
+                                                    Livigno e Irepalle
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <a href="#" class="addintional-info__item">
+                                            <div class="imgwrap">
+                                                <img class="fit-image" src="img/open/additional6.jpg" alt="img">
+                                            </div>
+                                            <div class="descr">
+                                                <p>
+                                                    Valtellina
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="useful-links">
+                                <h4>Useful links</h4>
+                                <div class="linkswrapp">
+                                    <div class="linksblue">
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-6">
+                                                <a href="#" class="blue-btn">
+                                                    <img src="img/open/info-icon.svg" alt="icon">
+                                                    <b>Info</b> Passo Stelvio
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6">
+                                                <a href="#" class="blue-btn">
+                                                    <img src="img/open/reception-icon.svg" alt="icon">
+                                                    <b>Hotel</b> Passo Stelvio
+                                                </a>
+                                            </div>
+                                            <div class="col-lg-4 col-md-6">
+                                                <a href="#" class="blue-btn">
+                                                    <img src="img/open/offer-icon.svg" alt="icon">
+                                                    <b>Offers</b> Speciali
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="#" class="white-btn">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 7.5L4.76837e-07 7.5" stroke="#02B0EA"
+                                                        stroke-width="2" />
+                                                    <path d="M7.5 15L7.5 0" stroke="#02B0EA" stroke-width="2" />
+                                                </svg>
+                                                Ask for Price and Offerte
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="#" class="white-btn">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 7.5L4.76837e-07 7.5" stroke="#02B0EA"
+                                                        stroke-width="2" />
+                                                    <path d="M7.5 15L7.5 0" stroke="#02B0EA" stroke-width="2" />
+                                                </svg>
+                                                SPA, Baths, Spa, Wellness
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="#" class="white-btn">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 7.5L4.76837e-07 7.5" stroke="#02B0EA"
+                                                        stroke-width="2" />
+                                                    <path d="M7.5 15L7.5 0" stroke="#02B0EA" stroke-width="2" />
+                                                </svg>
+                                                Golf
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="#" class="white-btn">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 7.5L4.76837e-07 7.5" stroke="#02B0EA"
+                                                        stroke-width="2" />
+                                                    <path d="M7.5 15L7.5 0" stroke="#02B0EA" stroke-width="2" />
+                                                </svg>
+                                                National Park
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="#" class="white-btn">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 7.5L4.76837e-07 7.5" stroke="#02B0EA"
+                                                        stroke-width="2" />
+                                                    <path d="M7.5 15L7.5 0" stroke="#02B0EA" stroke-width="2" />
+                                                </svg>
+                                                Ski area, Skipass
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6">
+                                            <a href="#" class="white-btn">
+                                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M15 7.5L4.76837e-07 7.5" stroke="#02B0EA"
+                                                        stroke-width="2" />
+                                                    <path d="M7.5 15L7.5 0" stroke="#02B0EA" stroke-width="2" />
+                                                </svg>
+                                                News
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
-
-
-
-
-
-
                 </div>
             </div>
 
-            <div class="videosection">
-                <a href="#" class="videolink">
-                    <video autoplay="" loop="" muted="">
-                        <source src="video/video.mp4" type="video/mp4">
-                    </video>
-                </a>
-                <a href="#" class="mobileshow">
-                    <img src="img/main/a-img.jpg" alt="img">
-                </a>
-            </div>
         </main>
 
         <footer class="footer">
@@ -244,12 +552,83 @@
             </div>
         </footer>
     </div>
+
+
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <script src="js/lib/select2.js"></script>
+    <script src="js/lib/swiper.js "></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // Map initialization
+        const map = L.map('map').setView([46.2146, 10.1673], 16);
+
+        // map style
+        L.tileLayer(
+            'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+            {
+                attribution: '© OpenStreetMap contributors © CARTO'
+            }
+        ).addTo(map);
+
+        // City icon (with text)
+        const cityMarker = L.divIcon({
+            html: `
+            <div class="city-marker">
+                <img src="img/open/location-main.png" alt="Tirano">
+                <span>Tirano</span>
+            </div>
+        `,
+            className: '',
+            iconSize: [60, 60],
+            iconAnchor: [30, 60]
+        });
+
+        // regular icons
+        const cameraIcon = L.icon({
+            iconUrl: 'img/open/location-sub.png',
+            iconSize: [32, 32],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -30]
+        });
+
+        // City marker
+        L.marker([46.2146, 10.1673], { icon: cityMarker })
+            .addTo(map);
+
+        // Other markers
+        const cameras = [
+            {
+                coords: [46.2162, 10.1701],
+                title: 'Camera – Piazza Cavour',
+                desc: 'Live webcam from city center'
+            },
+            {
+                coords: [46.2129, 10.1650],
+                title: 'Camera – Railway Station',
+                desc: 'View near Tirano station'
+            },
+            {
+                coords: [46.2138, 10.1608],
+                title: 'Camera – River Area',
+                desc: 'Panorama of the river'
+            }
+        ];
+
+        cameras.forEach(cam => {
+            L.marker(cam.coords, { icon: cameraIcon })
+                .addTo(map)
+                .bindPopup(`
+            <div class="camera-popup">
+                <strong>${cam.title}</strong><br>
+                <span>${cam.desc}</span>
+            </div>
+        `);
+        });
+    </script>
+
 </body>
-
-
-<script src="js/lib/jquery.js"></script>
-<script src="js/lib/bootstrap.min.js"></script>
-<script src="js/lib/select2.js"></script>
-<script src="js/main.js"></script>
 
 </html>

@@ -12,7 +12,7 @@ $(document).ready(function () {
             $('.language__current').removeClass('open');
         }
     });
-    
+
     // look more
     $('.webcamlist').each(function () {
         const $list = $(this).find('ul li');
@@ -73,5 +73,33 @@ $(document).ready(function () {
         $('.hidden-content').slideToggle()
     });
 
+    // weather slider
+    var swiper = new Swiper(".weather-slider", {
+        slidesPerView: 7,
+        spaceBetween: 40,
+        speed: 700,
+        breakpoints: {
+            576: {
+                slidesPerView: 5.5,
+                spaceBetween: 5,
+            },
+            768: {
+                slidesPerView: 7,
+                spaceBetween: 5,
+            },
+            992: {
+                slidesPerView: 7,
+                spaceBetween: 10,
+            },
+            1200: {
+                slidesPerView: 7,
+                spaceBetween: 20,
+            },
+            1600: {
+                slidesPerView: 7,
+                spaceBetween: 40,
+            },
+        },
+    });
 
 });

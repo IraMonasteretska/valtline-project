@@ -79,6 +79,8 @@
 }
 
 .webopen__description {
+    margin-bottom: 70px;
+
     h4 {
         margin-bottom: 40px;
         color: #242424;
@@ -149,4 +151,471 @@
             display: block;
         }
     }
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+}
+
+.city-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+}
+
+.city-marker img {
+    width: 50px;
+    height: auto;
+}
+
+.city-marker span {
+    font-size: 15px;
+    font-weight: 600;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.leaflet-popup-content {
+    margin: 10px 24px 10px 20px;
+    color: #02B0EA;
+    font-weight: 600;
+}
+
+.leaflet-tile {
+    filter: brightness(1.1) contrast(0.8) saturate(0.8);
+}
+
+.location-section {
+    margin: 80px 0;
+
+    h4 {
+        margin-bottom: 35px;
+    }
+}
+
+.weather-section {
+    margin: 80px 0;
+
+    h4 {
+        margin-bottom: 35px;
+    }
+}
+
+.weather-item {
+    background: #fff;
+    border: 1px solid #CFCFCF;
+    min-height: 233px;
+    text-align: center;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .day {
+        color: #606060;
+        font-weight: 700;
+        margin: 0;
+        font-size: 21px;
+        text-transform: capitalize;
+    }
+
+    img {
+        max-width: 55px;
+        max-height: 55px;
+    }
+
+    .temperature {
+        margin: 0;
+
+        span {
+            font-size: 20px;
+            font-weight: 700;
+
+            sup {
+                font-size: 14px;
+                transform: translateY(-4px);
+                display: inline-block;
+            }
+        }
+    }
+
+    .temperature__day {
+        color: #606060;
+        margin-right: 4px;
+    }
+
+    .temperature__night {
+        color: #B8B8B8;
+    }
+
+
+
+
+
+}
+
+.addintional-info {
+    margin: 80px 0;
+
+    h4 {
+        margin-bottom: 35px;
+    }
+}
+
+.addintional-info__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid #CFCFCF;
+    position: relative;
+    height: 111px;
+    background: #fff;
+    margin-bottom: 20px;
+    transition: 0.3s;
+
+    &:hover {
+        border: 1px solid #02B0EA;
+
+        .descr p {
+            color: #02B0EA;
+        }
+    }
+
+    .imgwrap {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 138px;
+    }
+
+    .descr {
+        padding: 10px 10px 10px 138px;
+
+        p {
+            padding-left: 17px;
+            color: #242424;
+            font-weight: 600;
+            font-size: 19px;
+            margin: 0;
+            transition: 0.3s;
+        }
+    }
+}
+
+.useful-links {
+    margin: 80px 0;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    h4 {
+        margin-bottom: 35px;
+    }
+
+    .blue-btn {
+        min-height: 59px;
+        width: 100%;
+        font-size: 20px;
+        font-weight: 400;
+
+        &:hover {
+            background: #1a1a1a;
+            border-color: #1a1a1a;
+            color: #fff;
+        }
+
+        b {
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        img {
+            margin-right: 15px;
+            width: 23px;
+            margin-top: -1px;
+        }
+    }
+
+    .white-btn {
+        background: #fff;
+        border: 1px solid #02B0EA;
+        min-height: 59px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #5B5B5B;
+        font-size: 20px;
+        transition: 0.3s;
+        margin-bottom: 28px;
+
+        img,
+        svg {
+            margin-right: 15px;
+            width: 100%;
+            max-width: 15px;
+            flex: 0 0 15px;
+
+            path {
+                transition: 0.3s;
+            }
+        }
+
+        &:hover {
+            background: #02B0EA;
+            color: #fff;
+
+            svg path {
+                stroke: #fff;
+            }
+        }
+    }
+}
+
+.linksblue {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #B4C7D9;
+    margin-bottom: 35px;
+
+    a {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:1599.8px) {
+    .addintional-info__item .imgwrap {
+        width: 100px;
+    }
+
+    .addintional-info__item .descr {
+        padding-left: 100px;
+    }
+
+    .addintional-info__item .descr p {
+        font-size: 16px;
+    }
+
+    .addintional-info__item {
+        height: 100px;
+    }
+}
+
+@media(max-width:1399.8px) {
+    .webcamscontent__open h1 {
+        margin-bottom: 10px;
+    }
+
+    .webcamscontent .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .openwebcam-block {
+        margin: 40px 0;
+    }
+
+    .webopen__description h4 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .webopen__description h6 {
+        margin-bottom: 10px;
+    }
+
+    .webopen__description ul {
+        margin-bottom: 20px;
+    }
+
+    .webcamscontent {
+        padding: 70px 0;
+    }
+
+
+    .location-section,
+    .weather-section,
+    .addintional-info,
+    .useful-links {
+        margin: 60px 0;
+    }
+
+    .location-section {
+        margin-top: 50px;
+    }
+
+    .webopen__description {
+        margin-bottom: 50px;
+    }
+
+    .location-section h4,
+    .weather-section h4,
+    .addintional-info h4,
+    .useful-links h4 {
+        margin-bottom: 20px;
+    }
+
+    .webopen__description p,
+    .webopen__description ul li {
+        font-size: 16px;
+    }
+
+    .useful-links .blue-btn,
+    .useful-links .white-btn {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:1199.8px) {
+    .openwebcam-block {
+        .blue-btn {
+            font-size: 16px;
+        }
+    }
+
+    .openwebcam-block .bottinfo {
+        margin-top: 20px;
+    }
+
+    .groupbtns .favorite,
+    .groupbtns .share {
+        margin-right: 10px;
+    }
+
+    .addintional-info__item .imgwrap {
+        width: 80px;
+    }
+
+    .addintional-info__item .descr {
+        padding-left: 80px;
+    }
+
+    .addintional-info__item {
+        height: auto;
+        height: 100%;
+        min-height: 80px;
+        margin-bottom: 0;
+    }
+
+    .addintional-info__item .descr p {
+        padding-left: 10px;
+        font-size: 15px;
+        line-height: 130%;
+        font-weight: 500;
+    }
+
+    .addintional-info {
+        .col-lg-4 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .useful-links .blue-btn img {
+        margin-right: 5px;
+        width: 18px;
+    }
+
+    .useful-links .blue-btn,
+    .useful-links .white-btn {
+        min-height: 50px;
+    }
+
+    .useful-links .white-btn img,
+    .useful-links .white-btn svg {
+        margin-right: 8px;
+    }
+
+
+
+
+
+
+    .useful-links .blue-btn,
+    .useful-links .white-btn {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:991.8px) {
+    .openwebcam-block {
+        margin: 30px 0;
+    }
+
+    .webopen__description .a-section {
+        margin-top: 30px;
+    }
+
+    .weather-item {
+        padding: 20px 10px;
+        min-height: 200px;
+    }
+
+    .weather-item .temperature span {
+        font-size: 18px;
+    }
+
+    .webcamscontent:last-child {
+        padding-bottom: 40px;
+    }
+
+}
+
+@media(max-width:767.8px) {
+    .timelapse {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .weather-wrapper {
+        width: 100vw;
+        margin-left: calc(-1 * (100vw - 540px) / 2);
+        padding-left: calc((100vw - 540px) / 2);
+
+        .swiper {
+            padding-right: 30px;
+        }
+    }
+
+    .webcamscontent .subtitle {
+        margin-bottom: 20px;
+    }
+
+
+
+}
+
+@media(max-width:575.8px) {
+
+    .groupbtns .favorite,
+    .groupbtns .share {
+        width: 43px;
+        height: 44px;
+        margin-right: 0;
+
+        svg {
+            width: 21px;
+        }
+    }
+
+    .groupbtns {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .openwebcam-block .groupbtns .blue-btn {
+        width: calc(100% - 120px);
+    }
+
+    .openwebcam-block {
+        margin-bottom: 40px;
+    }
+
 }
