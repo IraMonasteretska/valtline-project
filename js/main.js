@@ -74,32 +74,55 @@ $(document).ready(function () {
     });
 
     // weather slider
-    var swiper = new Swiper(".weather-slider", {
-        slidesPerView: 7,
-        spaceBetween: 40,
-        speed: 700,
-        breakpoints: {
-            576: {
-                slidesPerView: 5.5,
-                spaceBetween: 5,
+    if ($('.swiper').length) {
+        var swiper = new Swiper(".weather-slider", {
+            slidesPerView: 3.5,
+            spaceBetween: 8,
+            speed: 700,
+            breakpoints: {
+                360: {
+                    slidesPerView: 4.5,
+                    spaceBetween: 8,
+                },
+                576: {
+                    slidesPerView: 5.5,
+                    spaceBetween: 5,
+                },
+                768: {
+                    slidesPerView: 7,
+                    spaceBetween: 5,
+                },
+                992: {
+                    slidesPerView: 7,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 7,
+                    spaceBetween: 20,
+                },
+                1600: {
+                    slidesPerView: 7,
+                    spaceBetween: 40,
+                },
             },
-            768: {
-                slidesPerView: 7,
-                spaceBetween: 5,
-            },
-            992: {
-                slidesPerView: 7,
-                spaceBetween: 10,
-            },
-            1200: {
-                slidesPerView: 7,
-                spaceBetween: 20,
-            },
-            1600: {
-                slidesPerView: 7,
-                spaceBetween: 40,
-            },
-        },
+        });
+    }
+
+    // video player
+    if ($('.plyr').length) {
+        const player = new Plyr('#player', {
+            autoplay: true,
+            muted: true
+        });
+
+        player.muted = true;
+        player.play().catch(() => {
+        });
+    }
+
+    // close baner (modal)
+    $('.close-section').click(function(){
+        $(this).parent('.videosection').hide();
     });
 
 });

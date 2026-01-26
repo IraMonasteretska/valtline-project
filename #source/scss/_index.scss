@@ -887,7 +887,11 @@
         display: none;
     }
 
-
+    .videosection {
+        .mobileshow img {
+            width: 100%;
+        }
+    }
 
     .webcam-places__box ul li {
         margin-bottom: 15px;
