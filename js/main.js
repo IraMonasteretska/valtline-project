@@ -121,8 +121,13 @@ $(document).ready(function () {
     }
 
     // close baner (modal)
-    $('.close-section').click(function(){
+    $('.close-section').click(function () {
         $(this).parent('.videosection').hide();
+    });
+
+    // fancybox
+    Fancybox.bind("[data-fancybox]", {
+        // Your custom options
     });
 
 });

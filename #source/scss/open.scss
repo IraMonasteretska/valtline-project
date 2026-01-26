@@ -390,6 +390,10 @@
     }
 }
 
+.f-counter * {
+   line-height: var(--f-counter-line-height);
+}
+
 @media(max-width:1599.8px) {
     .addintional-info__item .imgwrap {
         width: 100px;
@@ -711,3 +715,4 @@
         font-size: 14px;
     }
 }
+
