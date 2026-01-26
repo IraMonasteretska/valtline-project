@@ -126,8 +126,16 @@ $(document).ready(function () {
     });
 
     // fancybox
-    Fancybox.bind("[data-fancybox]", {
-        // Your custom options
-    });
+    if ($('[data-fancybox]').length) {
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+    }
+
+    // close cookie
+    $('.cookie-close').click(function(){
+        $('.cookies-wrapper').hide();
+    })
+
 
 });
